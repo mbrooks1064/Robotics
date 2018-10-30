@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var teamNameLabel: UILabel!
+    @IBOutlet weak var bioText: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
     
   override func viewDidLoad() {
