@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var adminAccess = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,9 +22,17 @@ class ViewController: UIViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
             let passwordTextField = alert.textFields![0] as UITextField
             let password = passwordTextField.text
-            if password == "jj8735nxaffff" {
+            
+            if self.adminAccess == true {
                 self.performSegue(withIdentifier: "toAdmin", sender: self)
+            } else {
+                
+             if password == "jj8735nxaffff" {
+                self.performSegue(withIdentifier: "toAdmin", sender: self)
+                self.adminAccess = true
             }
+        }
+            
         }
         alert.addTextField { (textField) in
             textField.placeholder = "Password"
