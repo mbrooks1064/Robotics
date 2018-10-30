@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var bioText: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
-    
+
   override func viewDidLoad() {
         super.viewDidLoad()
 

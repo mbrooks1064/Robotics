@@ -11,6 +11,21 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="JIk-Gu-oaa">
+            <objects>
+                <viewController id="8ot-Vr-XhY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yzd-QO-9M8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2qq-Di-RMi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opQ-14-1Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-1192"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Robotics" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,15 +97,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="EZ6-UH-VJk">
-                        <barButtonItem key="rightBarButtonItem" title="Admin" id="vir-Fx-Qwi"/>
+                        <barButtonItem key="rightBarButtonItem" title="Admin" id="vir-Fx-Qwi">
+                            <connections>
+                                <action selector="adminButton:" destination="BYZ-38-t0r" id="l4L-XK-iIH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="TMc-IZ-qHb" kind="show" identifier="segueFromBracket" id="OZr-iT-NVd"/>
+                        <segue destination="8ot-Vr-XhY" kind="show" identifier="toAdmin" id="Imu-CD-RlT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-524.8875562218891"/>
+            <point key="canvasLocation" x="836" y="-510"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="zTa-J2-GMN">
