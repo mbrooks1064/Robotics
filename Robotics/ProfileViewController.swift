@@ -8,14 +8,22 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+  override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        <#code#>
+    }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        <#code#>
+    }
 
 }
