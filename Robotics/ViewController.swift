@@ -22,21 +22,22 @@ class ViewController: UIViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
             let passwordTextField = alert.textFields![0] as UITextField
             let password = passwordTextField.text
-            
             if self.adminAccess == true {
                 self.performSegue(withIdentifier: "toAdmin", sender: self)
             } else {
-                
              if password == "jj8735nxaffff" {
                 self.performSegue(withIdentifier: "toAdmin", sender: self)
                 self.adminAccess = true
             }
         }
-            
         }
         alert.addTextField { (textField) in
+            if self.adminAccess == true {
+                textField.placeholder = "Just tap ok"
+            } else {
             textField.placeholder = "Password"
-        }
+            }
+            }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
