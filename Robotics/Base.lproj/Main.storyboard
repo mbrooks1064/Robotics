@@ -126,6 +126,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="teamEight" destination="GD4-AO-oSm" id="rj8-yN-vbs"/>
+                        <outlet property="teamFive" destination="oED-bG-xDy" id="etb-MK-a2X"/>
+                        <outlet property="teamFour" destination="set-In-bGk" id="3qE-Jo-5B3"/>
+                        <outlet property="teamNine" destination="4yv-Jz-B4N" id="KcF-ft-HmJ"/>
+                        <outlet property="teamOne" destination="8ck-LW-33r" id="zum-wa-3Tl"/>
+                        <outlet property="teamSeven" destination="RoC-Vg-PIa" id="pKj-uL-3gz"/>
+                        <outlet property="teamSix" destination="as9-Ly-Od7" id="czC-Ux-CVb"/>
+                        <outlet property="teamThree" destination="DAJ-76-lBx" id="3Qh-pf-DD8"/>
+                        <outlet property="teamTwo" destination="eDe-wY-eEP" id="gbm-vP-abK"/>
                         <segue destination="TMc-IZ-qHb" kind="show" identifier="segueFromBracket" id="OZr-iT-NVd"/>
                         <segue destination="8ot-Vr-XhY" kind="show" identifier="toAdmin" id="Imu-CD-RlT"/>
                     </connections>
