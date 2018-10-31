@@ -43,6 +43,42 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
+    @IBAction func teamOne(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+    
+    }
+    @IBAction func teamTwo(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+    
+    }
+    @IBAction func teamThree(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+    
+    }
+    @IBAction func teamFour(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+   
+    }
+    @IBAction func teamFive(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+
+    }
+    @IBAction func teamSix(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+
+    }
+    @IBAction func teamSeven(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+
+    }
+    @IBAction func teamEight(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+
+    }
+    @IBAction func teamNine(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
+
+    }
+    
     
 }
-
