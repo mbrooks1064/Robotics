@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
     var teamThatWasTapped: String! = ""
+    var teamArray: [String] = [""]
   override func viewDidLoad() {
         super.viewDidLoad()
     print(teamThatWasTapped)
@@ -28,7 +29,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 9
+        return teamArray.count
     }
 
 }
