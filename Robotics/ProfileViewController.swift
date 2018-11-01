@@ -24,11 +24,11 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        <#code#>
+        return 8
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return 8
     }
 
 }
