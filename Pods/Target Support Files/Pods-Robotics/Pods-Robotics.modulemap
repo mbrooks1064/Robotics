@@ -1,0 +1,6 @@
+framework module Pods_Robotics {
+  umbrella header "Pods-Robotics-umbrella.h"
+
+  export *
+  module * { export * }
+}
