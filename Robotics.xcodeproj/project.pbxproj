@@ -65,8 +65,8 @@
 			children = (
 				6E4D79C42187591A00F8EEA0 /* AppDelegate.swift */,
 				6E4D79C62187591A00F8EEA0 /* ViewController.swift */,
-				6E4D79C82187591A00F8EEA0 /* Main.storyboard */,
 				6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */,
+				6E4D79C82187591A00F8EEA0 /* Main.storyboard */,
 				6E4D79CB2187591C00F8EEA0 /* Assets.xcassets */,
 				6E4D79CD2187591C00F8EEA0 /* LaunchScreen.storyboard */,
 				6E4D79D02187591C00F8EEA0 /* Info.plist */,
@@ -164,15 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Robotics-checkManifestLockResult.txt",
 			);
