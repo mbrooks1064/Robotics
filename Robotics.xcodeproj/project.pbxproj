@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24D74B3D1F28C68F99BFCA4E /* Pods_Robotics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */; };
 		6E4D79C52187591A00F8EEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79C42187591A00F8EEA0 /* AppDelegate.swift */; };
 		6E4D79C72187591A00F8EEA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79C62187591A00F8EEA0 /* ViewController.swift */; };
 		6E4D79CA2187591A00F8EEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D79C82187591A00F8EEA0 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21C19DF27296D04573734C4E /* Pods-Robotics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robotics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Robotics/Pods-Robotics.release.xcconfig"; sourceTree = "<group>"; };
 		6E4D79C12187591A00F8EEA0 /* Robotics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Robotics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4D79C42187591A00F8EEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4D79C62187591A00F8EEA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		6E4D79CE2187591C00F8EEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E4D79D02187591C00F8EEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robotics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Robotics/Pods-Robotics.debug.xcconfig"; sourceTree = "<group>"; };
+		F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robotics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D74B3D1F28C68F99BFCA4E /* Pods_Robotics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				6E4D79C32187591A00F8EEA0 /* Robotics */,
 				6E4D79C22187591A00F8EEA0 /* Products */,
+				E9103EA6A94C0779BDCFE12A /* Pods */,
+				D522F7BDA90BDB309BF49470 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Robotics;
 			sourceTree = "<group>";
 		};
+		D522F7BDA90BDB309BF49470 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9103EA6A94C0779BDCFE12A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */,
+				21C19DF27296D04573734C4E /* Pods-Robotics.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E4D79D32187591C00F8EEA0 /* Build configuration list for PBXNativeTarget "Robotics" */;
 			buildPhases = (
+				E4B59505B172E6F90CDAFEBF /* [CP] Check Pods Manifest.lock */,
 				6E4D79BD2187591A00F8EEA0 /* Sources */,
 				6E4D79BE2187591A00F8EEA0 /* Frameworks */,
 				6E4D79BF2187591A00F8EEA0 /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B59505B172E6F90CDAFEBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Robotics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E4D79BD2187591A00F8EEA0 /* Sources */ = {
@@ -282,6 +332,7 @@
 		};
 		6E4D79D42187591C00F8EEA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +350,7 @@
 		};
 		6E4D79D52187591C00F8EEA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C19DF27296D04573734C4E /* Pods-Robotics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
