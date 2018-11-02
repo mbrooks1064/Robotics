@@ -110,12 +110,15 @@ class ViewController: UIViewController {
 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier = "toAdmin" {
+            let n2vc = segue.destination as! AdminViewController
+            n2vc.teamThatWasTapped = initiatedSegue
+            n2vc.teamArray = teams
+        } else {
         let nvc = segue.destination as! ProfileViewController
         nvc.teamThatWasTapped = initiatedSegue
         nvc.teamArray = teams
-        let n2vc = segue.destination as! AdminViewController
-        n2vc.teamThatWasTapped = initiatedSegue
-        n2vc.teamArray = teams
+        }
     }
     
 }
