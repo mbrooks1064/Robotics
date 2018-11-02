@@ -31,5 +31,5 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return teamArray.count
     }
-
+    
 }
