@@ -14,6 +14,7 @@
 		6E4D79CC2187591C00F8EEA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D79CB2187591C00F8EEA0 /* Assets.xcassets */; };
 		6E4D79CF2187591C00F8EEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D79CD2187591C00F8EEA0 /* LaunchScreen.storyboard */; };
 		6E4D79D721875DD900F8EEA0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */; };
+		6E6835F3218CA2AB00D6D7B2 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6E4D79CE2187591C00F8EEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E4D79D02187591C00F8EEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robotics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Robotics/Pods-Robotics.debug.xcconfig"; sourceTree = "<group>"; };
 		F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robotics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 				6E4D79C42187591A00F8EEA0 /* AppDelegate.swift */,
 				6E4D79C62187591A00F8EEA0 /* ViewController.swift */,
 				6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */,
+				6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */,
 				6E4D79C82187591A00F8EEA0 /* Main.storyboard */,
 				6E4D79CB2187591C00F8EEA0 /* Assets.xcassets */,
 				6E4D79CD2187591C00F8EEA0 /* LaunchScreen.storyboard */,
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6835F3218CA2AB00D6D7B2 /* AdminViewController.swift in Sources */,
 				6E4D79D721875DD900F8EEA0 /* ProfileViewController.swift in Sources */,
 				6E4D79C72187591A00F8EEA0 /* ViewController.swift in Sources */,
 				6E4D79C52187591A00F8EEA0 /* AppDelegate.swift in Sources */,

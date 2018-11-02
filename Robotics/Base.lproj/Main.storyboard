@@ -10,20 +10,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Admin View Controller-->
         <scene sceneID="JIk-Gu-oaa">
             <objects>
-                <viewController id="8ot-Vr-XhY" sceneMemberID="viewController">
+                <viewController id="8ot-Vr-XhY" customClass="AdminViewController" customModule="Robotics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yzd-QO-9M8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Team Name Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76A-U2-f2d">
+                                <rect key="frame" x="79" y="129" width="199" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOV-pV-UdI">
+                                <rect key="frame" x="160" y="167" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="enterButton:" destination="8ot-Vr-XhY" eventType="touchUpInside" id="3qu-ya-pTw"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-wf-Hf4">
+                                <rect key="frame" x="60" y="64" width="255" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8ot-Vr-XhY" id="QsE-F1-G1L"/>
+                                    <outlet property="delegate" destination="8ot-Vr-XhY" id="waJ-rc-yNn"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2qq-Di-RMi"/>
                     </view>
+                    <connections>
+                        <outlet property="imagePicker" destination="hW2-wf-Hf4" id="ap5-C2-nMT"/>
+                        <outlet property="teamNameTextField" destination="76A-U2-f2d" id="6Ap-dK-k8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opQ-14-1Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-1192"/>
+            <point key="canvasLocation" x="836" y="-1192.3538230884558"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

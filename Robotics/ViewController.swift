@@ -113,6 +113,9 @@ class ViewController: UIViewController {
         let nvc = segue.destination as! ProfileViewController
         nvc.teamThatWasTapped = initiatedSegue
         nvc.teamArray = teams
+        let n2vc = segue.destination as! AdminViewController
+        n2vc.teamThatWasTapped = initiatedSegue
+        n2vc.teamArray = teams
     }
     
 }

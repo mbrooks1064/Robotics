@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
   override func viewDidLoad() {
         super.viewDidLoad()
     print(teamThatWasTapped)
-
+    pickerView.reloadAllComponents()
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
