@@ -118,7 +118,8 @@ class ViewController: UIViewController {
         let nvc = segue.destination as! ProfileViewController
         nvc.teamThatWasTapped = initiatedSegue
         nvc.teamArray = teams
-        } 
+        }
+        
     }
     
 }
