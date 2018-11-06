@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         super.viewDidLoad()
     print(teamThatWasTapped)
     pickerView.reloadAllComponents()
+    
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

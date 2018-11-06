@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var teamNine: UIButton!
     var initiatedSegue: String!
     var adminAccess = false
+    var message: String = ""
+    var alertTitle = "On Deck Next:"
+
     var teams: [String] = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
     override func viewDidLoad() {
         super.viewDidLoad()
+
 //        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
         teamOne.setTitle(teams[0],for: .normal)
         teamTwo.setTitle(teams[1],for: .normal)
@@ -122,4 +126,5 @@ class ViewController: UIViewController {
         
     }
     
+
 }
