@@ -18,9 +18,11 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var pickerView: UIPickerView!
     var teamThatWasTapped: String! = ""
     var teamArray: [String] = [""]
+    var receiveTeamNumber = 1
   override func viewDidLoad() {
         super.viewDidLoad()
     print(teamThatWasTapped)
+    pickerView.selectedRow(inComponent: receiveTeamNumber)
     pickerView.reloadAllComponents()
     
     }

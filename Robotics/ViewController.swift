@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var teamEight: UIButton!
     @IBOutlet weak var teamNine: UIButton!
     var initiatedSegue: String!
+    var teamNumber: Int!
     var adminAccess = false
     var message: String = ""
     var alertTitle = "On Deck Next:"
@@ -70,46 +71,63 @@ class ViewController: UIViewController {
     }
     @IBAction func teamOne(_ sender: UIButton) {
         initiatedSegue = teams[0]
+        teamNumber = 1
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamTwo(_ sender: UIButton) {
         initiatedSegue = teams[1]
+        teamNumber = 2
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamThree(_ sender: UIButton) {
         initiatedSegue = teams[2]
+        teamNumber = 3
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamFour(_ sender: UIButton) {
         initiatedSegue = teams[3]
+        teamNumber = 4
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamFive(_ sender: UIButton) {
         initiatedSegue = teams[4]
+        teamNumber = 5
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamSix(_ sender: UIButton) {
         initiatedSegue = teams[5]
+        teamNumber = 6
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamSeven(_ sender: UIButton) {
         initiatedSegue = teams[6]
+        teamNumber = 7
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamEight(_ sender: UIButton) {
         initiatedSegue = teams[7]
+        teamNumber = 8
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
     @IBAction func teamNine(_ sender: UIButton) {
         initiatedSegue = teams[8]
+        teamNumber = 9
+
         self.performSegue(withIdentifier: "segueFromBracket", sender: self)
 
     }
@@ -118,10 +136,13 @@ class ViewController: UIViewController {
             let n2vc = segue.destination as! AdminViewController
             n2vc.teamThatWasTapped = initiatedSegue
             n2vc.teamArray = teams
+//            n2vc.receiveTeamNumber = teamNumber
         } else {
-        let nvc = segue.destination as! ProfileViewController
-        nvc.teamThatWasTapped = initiatedSegue
-        nvc.teamArray = teams
+            let nvc = segue.destination as! ProfileViewController
+            nvc.teamThatWasTapped = initiatedSegue
+            nvc.teamArray = teams
+            nvc.receiveTeamNumber = teamNumber
+
         }
         
     }

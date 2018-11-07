@@ -16,14 +16,16 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var pickerSpot: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        imagePicker.reloadAllComponents()
     }
 
     @IBAction func enterButton(_ sender: UIButton) {
 //        pickerSpot = imagePicker.selectedRow(inComponent: )
-        
+        pickerSpot = imagePicker.selectedRow(inComponent: 0)
+        teamArray.remove(at: pickerSpot)
+        teamArray.insert(teamNameTextField.text!, at: pickerSpot)
         imagePicker.reloadAllComponents()
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -41,4 +43,5 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let nvc = unwindSegue.destination as! ViewController
         nvc.teams = teamArray
     }
+    
 }
