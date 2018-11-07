@@ -25,6 +25,7 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         teamArray.remove(at: pickerSpot)
         teamArray.insert(teamNameTextField.text!, at: pickerSpot)
         imagePicker.reloadAllComponents()
+        self.performSegue(withIdentifier: "Unwind", sender: self)
 
     }
     
@@ -42,6 +43,7 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
         let nvc = unwindSegue.destination as! ViewController
         nvc.teams = teamArray
+        print(nvc.teams)
     }
     
 }
