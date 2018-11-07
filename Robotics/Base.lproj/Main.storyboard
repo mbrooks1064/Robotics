@@ -45,6 +45,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2qq-Di-RMi"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imagePicker" destination="hW2-wf-Hf4" id="ap5-C2-nMT"/>
                         <outlet property="teamNameTextField" destination="76A-U2-f2d" id="6Ap-dK-k8b"/>

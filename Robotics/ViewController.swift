@@ -147,5 +147,15 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func unwindFromAdminVC(_ sender: UIStoryboardSegue) {
+        if sender.source is AdminViewController {
+            if let nvc3 = sender.source as? AdminViewController {
+            nvc3.teamArray = teams
+                print(teams)
+            
+            }
+        }
+    }
+    
 
 }
