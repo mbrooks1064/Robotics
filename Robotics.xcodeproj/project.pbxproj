@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24D74B3D1F28C68F99BFCA4E /* Pods_Robotics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */; };
 		6E4D79C52187591A00F8EEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79C42187591A00F8EEA0 /* AppDelegate.swift */; };
 		6E4D79C72187591A00F8EEA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79C62187591A00F8EEA0 /* ViewController.swift */; };
 		6E4D79CA2187591A00F8EEA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D79C82187591A00F8EEA0 /* Main.storyboard */; };
@@ -15,6 +14,7 @@
 		6E4D79CF2187591C00F8EEA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D79CD2187591C00F8EEA0 /* LaunchScreen.storyboard */; };
 		6E4D79D721875DD900F8EEA0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */; };
 		6E6835F3218CA2AB00D6D7B2 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */; };
+		D390F9320C553B58631F7348 /* libPods-Robotics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 824F490E87B6759534AB55E0 /* libPods-Robotics.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		6E4D79D02187591C00F8EEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		824F490E87B6759534AB55E0 /* libPods-Robotics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Robotics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robotics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Robotics/Pods-Robotics.debug.xcconfig"; sourceTree = "<group>"; };
-		F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Robotics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D74B3D1F28C68F99BFCA4E /* Pods_Robotics.framework in Frameworks */,
+				D390F9320C553B58631F7348 /* libPods-Robotics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		D522F7BDA90BDB309BF49470 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F79B43D6E4C87C33181B0442 /* Pods_Robotics.framework */,
+				824F490E87B6759534AB55E0 /* libPods-Robotics.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
