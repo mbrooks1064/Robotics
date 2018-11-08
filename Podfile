@@ -7,6 +7,7 @@ target 'Robotics' do
 pod 'Firebase'
 pod 'FirebaseStorage'
 pod 'FirebaseMessaging'
+pod 'Firebase/Database'
 
 
 

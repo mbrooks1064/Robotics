@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+
 class ViewController: UIViewController {
     @IBOutlet weak var teamOne: UIButton!
     @IBOutlet weak var teamTwo: UIButton!
@@ -23,10 +24,11 @@ class ViewController: UIViewController {
     var adminAccess = false
     var message: String = ""
     var alertTitle = "On Deck Next:"
-
+    var ref:DatabaseReference!
     var teams: [String] = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
 
 //        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
         teamOne.setTitle(teams[0],for: .normal)
