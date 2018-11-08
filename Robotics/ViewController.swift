@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class ViewController: UIViewController {
     @IBOutlet weak var teamOne: UIButton!
     @IBOutlet weak var teamTwo: UIButton!
