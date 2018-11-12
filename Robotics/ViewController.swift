@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var teamOne: UIButton!
     @IBOutlet weak var teamTwo: UIButton!
     @IBOutlet weak var teamThree: UIButton!
@@ -40,6 +40,8 @@ class ViewController: UIViewController {
         teamSeven.setTitle(teams[6],for: .normal)
         teamEight.setTitle(teams[7],for: .normal)
         teamNine.setTitle(teams[8],for: .normal)
+        
+        navigationController?.delegate = self
         
     }
     @IBAction func adminButton(_ sender: UIBarButtonItem) {
@@ -153,14 +155,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindFromAdminVC(_ sender: UIStoryboardSegue) {
-        if sender.source is AdminViewController {
             if let nvc3 = sender.source as? AdminViewController {
             nvc3.teamArray = teams
                 print(teams)
+    
             
             }
         }
-    }
-    
 
 }
