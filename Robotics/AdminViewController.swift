@@ -29,16 +29,19 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         imagePicker.reloadAllComponents()
         bioArrayAdmin.remove(at: pickerSpot)
         bioArrayAdmin.insert(bioBox.text!, at: pickerSpot)
+        
 
     }
-    @IBAction func pickerSwiperThing(_ sender: UISwipeGestureRecognizer) {
+    @IBAction func pickerSwiperThing(_ sender: UITapGestureRecognizer) {
         updateBox()
         
     }
     func updateBox() {
         pickerSpot = imagePicker.selectedRow(inComponent: 0)
+
         bioBox.text = bioArrayAdmin[pickerSpot]
         bioBox.reloadInputViews()
+        
     }
     
     
@@ -57,7 +60,9 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ViewController
         vc.teams = teamArray
+        vc.bioArray = bioArrayAdmin
         print(vc.teams)
+        print(vc.bioArray)
     }
     
 }

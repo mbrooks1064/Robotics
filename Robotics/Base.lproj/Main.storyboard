@@ -41,7 +41,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="8ot-Vr-XhY" id="QsE-F1-G1L"/>
                                     <outlet property="delegate" destination="8ot-Vr-XhY" id="waJ-rc-yNn"/>
-                                    <outletCollection property="gestureRecognizers" destination="dfc-bP-rSe" appends="YES" id="Van-Ss-AwM"/>
+                                    <outletCollection property="gestureRecognizers" destination="bAs-j4-pgX" appends="YES" id="sTI-Qm-E1m"/>
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Team Bio here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-0f-8Gy">
@@ -65,11 +65,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opQ-14-1Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="u9z-iH-4eE" userLabel="Exit" sceneMemberID="exit"/>
-                <swipeGestureRecognizer direction="right" id="dfc-bP-rSe">
+                <tapGestureRecognizer id="bAs-j4-pgX">
                     <connections>
-                        <action selector="pickerSwiperThing:" destination="8ot-Vr-XhY" id="5N5-IT-6Ot"/>
+                        <action selector="pickerSwiperThing:" destination="8ot-Vr-XhY" id="JfI-wR-UVQ"/>
                     </connections>
-                </swipeGestureRecognizer>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="836" y="-1325.4872563718143"/>
         </scene>
