@@ -9,10 +9,12 @@
 import UIKit
 
 class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    @IBOutlet weak var bioBox: UITextView!
     @IBOutlet weak var teamNameTextField: UITextField!
     @IBOutlet weak var imagePicker: UIPickerView!
     var teamThatWasTapped: String! = ""
     var teamArray: [String] = [""]
+    var bioArrayAdmin: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var pickerSpot: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +27,20 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         teamArray.remove(at: pickerSpot)
         teamArray.insert(teamNameTextField.text!, at: pickerSpot)
         imagePicker.reloadAllComponents()
-        // self.performSegue(withIdentifier: "Unwind", sender: self)
+        bioArrayAdmin.remove(at: pickerSpot)
+        bioArrayAdmin.insert(bioBox.text!, at: pickerSpot)
 
     }
+    @IBAction func pickerSwiperThing(_ sender: UISwipeGestureRecognizer) {
+        updateBox()
+        
+    }
+    func updateBox() {
+        pickerSpot = imagePicker.selectedRow(inComponent: 0)
+        bioBox.text = bioArrayAdmin[pickerSpot]
+        bioBox.reloadInputViews()
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -40,10 +53,11 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return teamArray[row]
     }
-//    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-//        let nvc = unwindSegue.destination as! ViewController
-//        nvc.teams = teamArray
-//        print(nvc.teams)
-//    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ViewController
+        vc.teams = teamArray
+        print(vc.teams)
+    }
     
 }

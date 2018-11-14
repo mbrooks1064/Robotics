@@ -31,16 +31,26 @@
                                 <state key="normal" title="Enter"/>
                                 <connections>
                                     <action selector="enterButton:" destination="8ot-Vr-XhY" eventType="touchUpInside" id="3qu-ya-pTw"/>
+                                    <segue destination="u9z-iH-4eE" kind="unwind" unwindAction="unwindToOne:" id="9Lw-ao-Mft"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-wf-Hf4">
                                 <rect key="frame" x="60" y="64" width="255" height="57"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="dataSource" destination="8ot-Vr-XhY" id="QsE-F1-G1L"/>
                                     <outlet property="delegate" destination="8ot-Vr-XhY" id="waJ-rc-yNn"/>
+                                    <outletCollection property="gestureRecognizers" destination="dfc-bP-rSe" appends="YES" id="Van-Ss-AwM"/>
                                 </connections>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Team Bio here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-0f-8Gy">
+                                <rect key="frame" x="8" y="220" width="359" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2qq-Di-RMi"/>
@@ -48,13 +58,20 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bioBox" destination="dAK-0f-8Gy" id="Eim-is-Spc"/>
                         <outlet property="imagePicker" destination="hW2-wf-Hf4" id="ap5-C2-nMT"/>
                         <outlet property="teamNameTextField" destination="76A-U2-f2d" id="6Ap-dK-k8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opQ-14-1Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="u9z-iH-4eE" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="dfc-bP-rSe">
+                    <connections>
+                        <action selector="pickerSwiperThing:" destination="8ot-Vr-XhY" id="5N5-IT-6Ot"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="836" y="-1325"/>
+            <point key="canvasLocation" x="836" y="-1325.4872563718143"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

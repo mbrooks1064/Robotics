@@ -25,12 +25,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     var message: String = ""
     var alertTitle = "On Deck Next:"
     var ref:DatabaseReference!
+    var bioArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var teams: [String] = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         ref = Database.database().reference()
-
-//        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
+        
+        //        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
         teamOne.setTitle(teams[0],for: .normal)
         teamTwo.setTitle(teams[1],for: .normal)
         teamThree.setTitle(teams[2],for: .normal)
@@ -44,6 +45,24 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         navigationController?.delegate = self
         
     }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        ref = Database.database().reference()
+//
+////        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
+//        teamOne.setTitle(teams[0],for: .normal)
+//        teamTwo.setTitle(teams[1],for: .normal)
+//        teamThree.setTitle(teams[2],for: .normal)
+//        teamFour.setTitle(teams[3],for: .normal)
+//        teamFive.setTitle(teams[4],for: .normal)
+//        teamSix.setTitle(teams[5],for: .normal)
+//        teamSeven.setTitle(teams[6],for: .normal)
+//        teamEight.setTitle(teams[7],for: .normal)
+//        teamNine.setTitle(teams[8],for: .normal)
+//
+//        navigationController?.delegate = self
+//
+//    }
     @IBAction func adminButton(_ sender: UIBarButtonItem) {
         if adminAccess == true {
             self.performSegue(withIdentifier: "toAdmin", sender: self)
@@ -143,6 +162,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             let n2vc = segue.destination as! AdminViewController
             n2vc.teamThatWasTapped = initiatedSegue
             n2vc.teamArray = teams
+            n2vc.bioArrayAdmin = bioArray
 //            n2vc.receiveTeamNumber = teamNumber
         } else {
             let nvc = segue.destination as! ProfileViewController
@@ -153,14 +173,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
         
     }
-    
-    @IBAction func unwindFromAdminVC(_ sender: UIStoryboardSegue) {
-            if let nvc3 = sender.source as? AdminViewController {
-            nvc3.teamArray = teams
-                print(teams)
-    
-            
-            }
-        }
 
+        @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {}
+    
 }
