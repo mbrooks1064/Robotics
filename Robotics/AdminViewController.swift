@@ -23,12 +23,8 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
     @IBAction func enterButton(_ sender: UIButton) {
 //        pickerSpot = imagePicker.selectedRow(inComponent: )
-        pickerSpot = imagePicker.selectedRow(inComponent: 0)
-        teamArray.remove(at: pickerSpot)
-        teamArray.insert(teamNameTextField.text!, at: pickerSpot)
-        imagePicker.reloadAllComponents()
-        bioArrayAdmin.remove(at: pickerSpot)
-        bioArrayAdmin.insert(bioBox.text!, at: pickerSpot)
+       
+        updateSHIT()
         
 
     }
