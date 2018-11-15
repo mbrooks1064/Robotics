@@ -41,7 +41,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="8ot-Vr-XhY" id="QsE-F1-G1L"/>
                                     <outlet property="delegate" destination="8ot-Vr-XhY" id="waJ-rc-yNn"/>
-                                    <outletCollection property="gestureRecognizers" destination="bAs-j4-pgX" appends="YES" id="sTI-Qm-E1m"/>
+                                    <outletCollection property="gestureRecognizers" destination="q3q-od-OTG" appends="YES" id="wwf-ia-ZDw"/>
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Team Bio here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-0f-8Gy">
@@ -53,6 +53,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="2qq-Di-RMi"/>
                     </view>
                     <toolbarItems/>
@@ -65,11 +66,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opQ-14-1Lg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="u9z-iH-4eE" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="bAs-j4-pgX">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="q3q-od-OTG">
                     <connections>
-                        <action selector="pickerSwiperThing:" destination="8ot-Vr-XhY" id="JfI-wR-UVQ"/>
+                        <action selector="pickerSwiperThing:" destination="8ot-Vr-XhY" id="0ja-my-kVy"/>
                     </connections>
-                </tapGestureRecognizer>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="836" y="-1325.4872563718143"/>
         </scene>
@@ -85,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-LW-33r">
-                                <rect key="frame" x="25" y="78" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="77" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -93,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAJ-76-lBx">
-                                <rect key="frame" x="0.0" y="206" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="150" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -101,7 +102,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="set-In-bGk">
-                                <rect key="frame" x="66" y="257" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="193" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -109,7 +110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oED-bG-xDy">
-                                <rect key="frame" x="59" y="329" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="268" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -117,19 +118,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as9-Ly-Od7">
-                                <rect key="frame" x="59" y="395" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="319" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
                                     <action selector="teamSix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F72-Wr-4gT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD4-AO-oSm">
-                                <rect key="frame" x="59" y="542" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBb-fk-nSE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-Jz-B4N">
@@ -141,7 +134,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoC-Vg-PIa">
-                                <rect key="frame" x="59" y="470" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="356" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -149,11 +142,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDe-wY-eEP">
-                                <rect key="frame" x="0.0" y="123" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="118" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
                                     <action selector="teamTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keZ-kJ-6kV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD4-AO-oSm">
+                                <rect key="frame" x="0.0" y="291" width="82" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Team Name"/>
+                                <connections>
+                                    <action selector="teamEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBb-fk-nSE"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -32,13 +32,17 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
 
     }
-    @IBAction func pickerSwiperThing(_ sender: UITapGestureRecognizer) {
-        updateBox()
+    @IBAction func pickerSwiperThing(_ sender: UIPanGestureRecognizer) {
+        updateSHIT()
         
     }
-    func updateBox() {
+    func updateSHIT() {
         pickerSpot = imagePicker.selectedRow(inComponent: 0)
-
+        teamArray.remove(at: pickerSpot)
+        teamArray.insert(teamNameTextField.text!, at: pickerSpot)
+        imagePicker.reloadAllComponents()
+        bioArrayAdmin.remove(at: pickerSpot)
+        bioArrayAdmin.insert(bioBox.text!, at: pickerSpot)
         bioBox.text = bioArrayAdmin[pickerSpot]
         bioBox.reloadInputViews()
         

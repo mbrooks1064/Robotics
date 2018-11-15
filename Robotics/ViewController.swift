@@ -169,6 +169,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             nvc.teamThatWasTapped = initiatedSegue
             nvc.teamArray = teams
             nvc.receiveTeamNumber = teamNumber
+            nvc.bioArrayProfile = bioArray
 
         }
         
