@@ -36,14 +36,17 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     func updateSHIT() {
         pickerSpot = imagePicker.selectedRow(inComponent: 0)
-        teamArray.remove(at: pickerSpot)
-        teamArray.insert(teamNameTextField.text!, at: pickerSpot)
-        imagePicker.reloadAllComponents()
-        bioArrayAdmin.remove(at: pickerSpot)
-        bioArrayAdmin.insert(bioBox.text!, at: pickerSpot)
-        bioBox.text = bioArrayAdmin[pickerSpot]
-        bioBox.reloadInputViews()
-        
+        if teamNameTextField.text != "" {
+            teamArray.remove(at: pickerSpot)
+            teamArray.insert(teamNameTextField.text!, at: pickerSpot)
+            imagePicker.reloadAllComponents()
+        }
+        if bioBox.text != "" {
+            bioArrayAdmin.remove(at: pickerSpot)
+            bioArrayAdmin.insert(bioBox.text!, at: pickerSpot)
+            bioBox.text = bioArrayAdmin[pickerSpot]
+            bioBox.reloadInputViews()
+        }
     }
     
     
