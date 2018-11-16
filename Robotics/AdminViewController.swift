@@ -16,9 +16,11 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var teamArray: [String] = [""]
     var bioArrayAdmin: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var pickerSpot: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.reloadAllComponents()
+      //  teamNameTextField.text! = bioArrayAdmin.
     }
 
     @IBAction func enterButton(_ sender: UIButton) {
