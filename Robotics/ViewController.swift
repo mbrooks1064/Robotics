@@ -24,7 +24,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     var adminAccess = false
     var message: String = ""
     var alertTitle = "On Deck Next:"
-    var ref:DatabaseReference!
+    var ref: DatabaseReference!
     var bioArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var teams: [String] = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
     override func viewWillAppear(_ animated: Bool) {
@@ -176,5 +176,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
 
         @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {}
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ref.child("condition").observe(.value) { (snap: DataSnapshot) in
+            
+        }
+    }
 }
