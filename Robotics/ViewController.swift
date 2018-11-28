@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
+    @IBOutlet weak var demoLabel: UILabel!
     @IBOutlet weak var teamOne: UIButton!
     @IBOutlet weak var teamTwo: UIButton!
     @IBOutlet weak var teamThree: UIButton!
@@ -38,6 +39,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        let conditionRef =  ref.child("condition")
+        conditionRef.observe(DataEventType.value) { (snap:DataSnapshot) in
+            self.demoLabel.text = snap.value.debugDescription
+        }
 //        if firstTimeOpened == true {
 //            firstTimeOpened = false
 //            teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
