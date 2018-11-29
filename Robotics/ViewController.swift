@@ -40,7 +40,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let condition = teams[0]
+        let condition = teams[1]
         let conditionRef =  ref.child("condition")
         conditionRef.observe(DataEventType.value) { (snap:DataSnapshot) in
             self.demoLabel.text = snap.value.debugDescription
