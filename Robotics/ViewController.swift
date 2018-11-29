@@ -31,6 +31,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     let defaults = UserDefaults.standard
     var teams = [String]()
     var team = String()
+   
     {
         didSet
         {
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        let condition = teams[0]
         let conditionRef =  ref.child("condition")
         conditionRef.observe(DataEventType.value) { (snap:DataSnapshot) in
             self.demoLabel.text = snap.value.debugDescription
