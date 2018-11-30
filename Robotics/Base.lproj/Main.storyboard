@@ -51,6 +51,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iqu-nZ-hTm">
+                                <rect key="frame" x="139" y="456" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -61,6 +68,7 @@
                     <connections>
                         <outlet property="bioBox" destination="dAK-0f-8Gy" id="Eim-is-Spc"/>
                         <outlet property="imagePicker" destination="hW2-wf-Hf4" id="ap5-C2-nMT"/>
+                        <outlet property="numberField" destination="iqu-nZ-hTm" id="Q4f-Nm-8wd"/>
                         <outlet property="teamNameTextField" destination="76A-U2-f2d" id="6Ap-dK-k8b"/>
                     </connections>
                 </viewController>
@@ -82,19 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bracket" translatesAutoresizingMaskIntoConstraints="NO" id="nqN-qw-xhd">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-LW-33r">
-                                <rect key="frame" x="0.0" y="77" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggJ-Su-ZRl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAJ-76-lBx">
-                                <rect key="frame" x="0.0" y="150" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="169" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -102,7 +99,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="set-In-bGk">
-                                <rect key="frame" x="0.0" y="193" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="220" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -126,15 +123,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-Jz-B4N">
-                                <rect key="frame" x="59" y="613" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="472" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
                                     <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAf-TI-meV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUB-gI-lGf">
+                                <rect key="frame" x="0.0" y="523" width="82" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Team Name"/>
+                                <connections>
+                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keA-yo-5TM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYv-n6-X5G">
+                                <rect key="frame" x="0.0" y="574" width="82" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Team Name"/>
+                                <connections>
+                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ot2-aP-Ac3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeO-UU-dqx">
+                                <rect key="frame" x="0.0" y="625" width="82" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Team Name"/>
+                                <connections>
+                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWe-Fr-mju"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoC-Vg-PIa">
-                                <rect key="frame" x="0.0" y="356" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="370" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
@@ -150,28 +171,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD4-AO-oSm">
-                                <rect key="frame" x="0.0" y="291" width="82" height="43"/>
+                                <rect key="frame" x="0.0" y="421" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Team Name"/>
                                 <connections>
                                     <action selector="teamEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBb-fk-nSE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOp-Cg-blF">
-                                <rect key="frame" x="317" y="140" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-LW-33r">
+                                <rect key="frame" x="0.0" y="67" width="82" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Team Name"/>
+                                <connections>
+                                    <action selector="teamOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggJ-Su-ZRl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="nqN-qw-xhd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6uE-th-Hlg"/>
-                            <constraint firstItem="nqN-qw-xhd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AbA-ni-Dyt"/>
-                            <constraint firstItem="nqN-qw-xhd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D28-6M-5Qi"/>
-                            <constraint firstItem="nqN-qw-xhd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VYz-er-eMo"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="EZ6-UH-VJk">
@@ -182,7 +198,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="demoLabel" destination="aOp-Cg-blF" id="KBV-Qa-CeP"/>
                         <outlet property="teamEight" destination="GD4-AO-oSm" id="rj8-yN-vbs"/>
                         <outlet property="teamFive" destination="oED-bG-xDy" id="etb-MK-a2X"/>
                         <outlet property="teamFour" destination="set-In-bGk" id="3qE-Jo-5B3"/>
@@ -268,7 +283,4 @@
             <point key="canvasLocation" x="70" y="-524"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Bracket" width="981" height="763"/>
-    </resources>
 </document>

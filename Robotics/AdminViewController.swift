@@ -17,6 +17,7 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var teamArray: [String] = [""]
     var bioArrayAdmin: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var pickerSpot: Int = 0
+    @IBOutlet weak var numberField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,8 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let vc = segue.destination as! ViewController
         vc.teams = teamArray
         vc.bioArray = bioArrayAdmin
+        vc.numberOfTeams = "(/\numberField.text!)/"
+        
         print(vc.teams)
         print(vc.bioArray)
     }

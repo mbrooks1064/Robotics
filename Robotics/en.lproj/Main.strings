@@ -1,0 +1,48 @@
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "4yv-Jz-B4N"; */
+"4yv-Jz-B4N.normalTitle" = "Team Name";
+
+/* Class = "UITextField"; placeholder = "Type Team Name Here"; ObjectID = "76A-U2-f2d"; */
+"76A-U2-f2d.placeholder" = "Type Team Name Here";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "8ck-LW-33r"; */
+"8ck-LW-33r.normalTitle" = "Team Name";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "DAJ-76-lBx"; */
+"DAJ-76-lBx.normalTitle" = "Team Name";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "GD4-AO-oSm"; */
+"GD4-AO-oSm.normalTitle" = "Team Name";
+
+/* Class = "UITextView"; text = "Bio"; ObjectID = "LTM-bW-iRm"; */
+"LTM-bW-iRm.text" = "Bio";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "RoC-Vg-PIa"; */
+"RoC-Vg-PIa.normalTitle" = "Team Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aOp-Cg-blF"; */
+"aOp-Cg-blF.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "as9-Ly-Od7"; */
+"as9-Ly-Od7.normalTitle" = "Team Name";
+
+/* Class = "UITextView"; text = "Team Bio here"; ObjectID = "dAK-0f-8Gy"; */
+"dAK-0f-8Gy.text" = "Team Bio here";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "eDe-wY-eEP"; */
+"eDe-wY-eEP.normalTitle" = "Team Name";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "oED-bG-xDy"; */
+"oED-bG-xDy.normalTitle" = "Team Name";
+
+/* Class = "UIButton"; normalTitle = "Team Name"; ObjectID = "set-In-bGk"; */
+"set-In-bGk.normalTitle" = "Team Name";
+
+/* Class = "UIButton"; normalTitle = "Enter"; ObjectID = "vOV-pV-UdI"; */
+"vOV-pV-UdI.normalTitle" = "Enter";
+
+/* Class = "UIBarButtonItem"; title = "Admin"; ObjectID = "vir-Fx-Qwi"; */
+"vir-Fx-Qwi.title" = "Admin";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wYH-BG-BqU"; */
+"wYH-BG-BqU.text" = "Label";
