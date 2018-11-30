@@ -29,6 +29,7 @@
 		6E4D79D02187591C00F8EEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		6E715A3821B199370030BF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		6EA773E22195E8700069814B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6EA773E42195EAEE0069814B /* Robotics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Robotics.entitlements; sourceTree = "<group>"; };
 		824F490E87B6759534AB55E0 /* libPods-Robotics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Robotics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +216,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E4D79C92187591A00F8EEA0 /* Base */,
+				6E715A3821B199370030BF8B /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

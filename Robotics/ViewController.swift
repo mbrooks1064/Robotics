@@ -31,6 +31,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     let defaults = UserDefaults.standard
     var teams = [String]()
     var team = String()
+    var numberOfTeams = 0
    
     {
         didSet
@@ -38,13 +39,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
                         self.defaults.set(teams, forKey: team)
         }
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        let condition = teams[1]
-        let conditionRef = ref.child("condition")
-        conditionRef.observe(DataEventType.value) { (snap:DataSnapshot) in
-            self.demoLabel.text = snap.value.debugDescription
-        }
+//        super.viewWillAppear(true) {
+//        let condition = teams[1]
+//        let conditionRef = ref.child( "condition")
+//        conditionRef.observe(DataEventType.value) { (snap:DataSnapshot) in
+//            self.demoLabel.text = snap.value.debugDescription
+//        }
 //        if firstTimeOpened == true {
 //            firstTimeOpened = false
 //            teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
