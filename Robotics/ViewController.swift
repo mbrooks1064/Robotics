@@ -4,7 +4,7 @@
 //
 //  Created by period3 on 10/29/18.
 //  Copyright © 2018 period3. All rights reserved.
-//
+//[FIRDatabase Reference]
 
 import UIKit
 import Firebase
@@ -74,9 +74,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
 teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
     }
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //        ref = Database.database().reference()
+    func postfix()
+    {
+        let title = "Title"
+        let message = "Message"
+        let post : [String : AnyObject] = ["title":title as AnyObject,"message":message as AnyObject]
+        let databaseRef = Database.database().reference()
+        databaseRef.child("<#T##pathString: String##String#>")
+    }
+    
+    
     //
     ////        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
     //        teamOne.setTitle(teams[0],for: .normal)
@@ -211,4 +218,5 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
             
         }
     }
+
 }
