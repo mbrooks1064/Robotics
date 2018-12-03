@@ -9,7 +9,14 @@
 import UIKit
 import Firebase
 
+struct team{
+    let school:String
+    let wins:Int
+    let loses:Int
+}
+
 class ViewController: UIViewController, UINavigationControllerDelegate {
+    let teams = [team]
     @IBOutlet weak var demoLabel: UILabel!
     @IBOutlet weak var teamOne: UIButton!
     @IBOutlet weak var teamTwo: UIButton!
@@ -55,6 +62,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             teams = saveData
         }
         ref = Database.database().reference()
+        ref.child("Robotics").queryOrderedByKey().observe(.childAdded, with: {DataSnapshot in
+            
+            let school = DataSnapshot.value(forKey:"School")
+            let wins = DataSnapshot.value(forKey: "Loses")
+            let loses = DataSnapshot.value(forKey: "Wins")
+            
+            
+            self.teams.ins
+            
+            
+        })
         
         //        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
         teamOne.setTitle(teams[0],for: .normal)
@@ -82,7 +100,7 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
         let wins = "Wins"
         let  team: [String : AnyObject] = ["school":school as AnyObject,"loses":loses as AnyObject,"wins":wins as AnyObject]
         let databaseRef = Database.database().reference()
-        databaseRef.child("Robotics").setValue(team)
+        databaseRef.child("Robotics").childByAutoId().setValue(team)
     }
     
     
