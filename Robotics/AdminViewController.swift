@@ -68,8 +68,8 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let vc = segue.destination as! ViewController
         vc.teams = teamArray
         vc.bioArray = bioArrayAdmin
-        vc.numberOfTeams = "(/\numberField.text!)/"
-        
+        vc.numberOfTeams = Int(numberField.text!)!
+        print(vc.numberOfTeams)
         print(vc.teams)
         print(vc.bioArray)
     }
