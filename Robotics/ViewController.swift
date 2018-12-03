@@ -72,15 +72,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        postfix()
 teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
     }
     func postfix()
     {
-        let title = "Title"
-        let message = "Message"
-        let post : [String : AnyObject] = ["title":title as AnyObject,"message":message as AnyObject]
+        let school = "School"
+        let loses = "Loses"
+        let wins = "Wins"
+        let  team: [String : AnyObject] = ["school":school as AnyObject,"loses":loses as AnyObject,"wins":wins as AnyObject]
         let databaseRef = Database.database().reference()
-        databaseRef.child("<#T##pathString: String##String#>")
+        databaseRef.child("Robotics").setValue(team)
     }
     
     
