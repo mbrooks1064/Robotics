@@ -39,6 +39,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     var teams = [String]()
     var team = String()
     var numberOfTeams = 0
+    
    
     {
         didSet

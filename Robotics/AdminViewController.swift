@@ -69,9 +69,12 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         vc.teams = teamArray
         vc.bioArray = bioArrayAdmin
         vc.numberOfTeams = Int(numberField.text!)!
+        vc.bioArray = bioArrayAdmin
         print(vc.numberOfTeams)
         print(vc.teams)
         print(vc.bioArray)
+        
     }
+    
     
 }

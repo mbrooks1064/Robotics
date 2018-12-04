@@ -20,10 +20,12 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var teamArray: [String] = [""]
     var bioArrayProfile: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var receiveTeamNumber = 0
+    var bioBox1 = ""
   override func viewDidLoad() {
         super.viewDidLoad()
     print(teamThatWasTapped)
     pickerView.reloadAllComponents()
+    bioText.allowsEditingTextAttributes = false
     
     }
 
