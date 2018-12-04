@@ -64,9 +64,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         ref = Database.database().reference()
         ref.child("Robotics").queryOrderedByKey().observe(.childAdded, with: {DataSnapshot in
             
-            let school = DataSnapshot.value(forKey:"School")
-            let wins = DataSnapshot.value(forKey: "Loses")
-            let loses = DataSnapshot.value(forKey: "Wins")
+            let school = DataSnapshot.value(forKey:"school")
+            let wins = DataSnapshot.value(forKey: "loses")
+            let loses = DataSnapshot.value(forKey: "wins")
             
             
             self.teams.ins
