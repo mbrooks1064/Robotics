@@ -236,6 +236,7 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         ref.child("condition").observe(.value) { (snap: DataSnapshot) in
+        
             
         }
     }
