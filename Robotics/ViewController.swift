@@ -70,7 +70,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             let loses = DataSnapshot.value(forKey: "wins")
             
             
-            self.teams.ins
+//            self.teams.ins
             
             
         })
