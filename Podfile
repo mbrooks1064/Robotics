@@ -8,6 +8,7 @@ pod 'Firebase'
 pod 'FirebaseStorage'
 pod 'FirebaseMessaging'
 pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 
 
 
