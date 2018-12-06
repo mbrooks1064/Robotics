@@ -16,7 +16,6 @@ struct team{
 }
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
-    let teams = [team]
     @IBOutlet weak var demoLabel: UILabel!
     @IBOutlet weak var teamOne: UIButton!
     @IBOutlet weak var teamTwo: UIButton!
@@ -62,18 +61,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         if let saveData = defaults.object(forKey: team) as? [String] {
             teams = saveData
         }
-        ref = Database.database().reference()
-        ref.child("Robotics").queryOrderedByKey().observe(.childAdded, with: {DataSnapshot in
-            
-            let school = DataSnapshot.value(forKey:"school")
-            let wins = DataSnapshot.value(forKey: "loses")
-            let loses = DataSnapshot.value(forKey: "wins")
-            
-            
-//            self.teams.ins
-            
-            
-        })
+//        ref = Database.database().reference()
+//        ref.child("Robotics").queryOrderedByKey().observe(.childAdded, with: {DataSnapshot in
+//            
+//            let school = DataSnapshot.value(forKey:"School")
+//            let wins = DataSnapshot.value(forKey: "Loses")
+//            let loses = DataSnapshot.value(forKey: "Wins")
+//            
+//            
+//            self.teams.insert(school as! String, at: 1)
+//            
+//            
+//        })
         
         //        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
         teamOne.setTitle(teams[0],for: .normal)
@@ -235,10 +234,7 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
     @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {}
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        ref.child("condition").observe(.value) { (snap: DataSnapshot) in
         
-            
-        }
     }
 
 }
