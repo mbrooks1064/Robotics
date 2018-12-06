@@ -26,7 +26,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var teamSeven: UIButton!
     @IBOutlet weak var teamEight: UIButton!
     @IBOutlet weak var teamNine: UIButton!
-//    var firstTimeOpened = true
     var initiatedSegue: String!
     var teamNumber: Int!
     var adminAccess = false
@@ -48,33 +47,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true) {
-//        let condition = teams[1]
-//        let conditionRef = ref.child( "condition")
-//        conditionRef.observe(DataEventType.value) { (snap:DataSnapshot) in
-//            self.demoLabel.text = snap.value.debugDescription
-//        }
-//        if firstTimeOpened == true {
-//            firstTimeOpened = false
-//            teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
-//        }
+//
         if let saveData = defaults.object(forKey: team) as? [String] {
             teams = saveData
         }
-//        ref = Database.database().reference()
-//        ref.child("Robotics").queryOrderedByKey().observe(.childAdded, with: {DataSnapshot in
-//            
-//            let school = DataSnapshot.value(forKey:"School")
-//            let wins = DataSnapshot.value(forKey: "Loses")
-//            let loses = DataSnapshot.value(forKey: "Wins")
-//            
-//            
-//            self.teams.insert(school as! String, at: 1)
-//            
-//            
-//        })
-        
-        //        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
+
         teamOne.setTitle(teams[0],for: .normal)
         teamTwo.setTitle(teams[1],for: .normal)
         teamThree.setTitle(teams[2],for: .normal)
@@ -103,22 +80,6 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
         databaseRef.child("Robotics").childByAutoId().setValue(team)
     }
     
-    
-    //
-    ////        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
-    //        teamOne.setTitle(teams[0],for: .normal)
-    //        teamTwo.setTitle(teams[1],for: .normal)
-    //        teamThree.setTitle(teams[2],for: .normal)
-    //        teamFour.setTitle(teams[3],for: .normal)
-    //        teamFive.setTitle(teams[4],for: .normal)
-    //        teamSix.setTitle(teams[5],for: .normal)
-    //        teamSeven.setTitle(teams[6],for: .normal)
-    //        teamEight.setTitle(teams[7],for: .normal)
-    //        teamNine.setTitle(teams[8],for: .normal)
-    //
-    //        navigationController?.delegate = self
-    //
-    //    }
     @IBAction func adminButton(_ sender: UIBarButtonItem) {
         if adminAccess == true {
             self.performSegue(withIdentifier: "toAdmin", sender: self)
