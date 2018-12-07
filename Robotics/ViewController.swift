@@ -37,6 +37,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     var teams = [String]()
     var team = String()
     var numberOfTeams = 0
+    var pickerSpot: Int = 0
     
    
     {
@@ -187,6 +188,7 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
             nvc.teamArray = teams
             nvc.receiveTeamNumber = teamNumber
             nvc.bioArrayProfile = bioArray
+            nvc.pickerSpot = pickerSpot
             
         }
         
