@@ -55,6 +55,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let message = dict["alert"];
         print("%@", message!);
     }
+//    func swizzled_application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+//    }
+//    func swizzled_application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        
+//    }
+//    func askToShowVisibleNotifications() {
+//        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+//        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) {
+//            (granted, error) in
+//            ...
+//
+//        }
+//    }
 
 }
 

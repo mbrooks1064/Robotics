@@ -17,15 +17,6 @@ struct team{
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var demoLabel: UILabel!
-    @IBOutlet weak var teamOne: UIButton!
-    @IBOutlet weak var teamTwo: UIButton!
-    @IBOutlet weak var teamThree: UIButton!
-    @IBOutlet weak var teamFour: UIButton!
-    @IBOutlet weak var teamFive: UIButton!
-    @IBOutlet weak var teamSix: UIButton!
-    @IBOutlet weak var teamSeven: UIButton!
-    @IBOutlet weak var teamEight: UIButton!
-    @IBOutlet weak var teamNine: UIButton!
     var initiatedSegue: String!
     var teamNumber: Int!
     var adminAccess = false
@@ -53,15 +44,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             teams = saveData
         }
 
-        teamOne.setTitle(teams[0],for: .normal)
-        teamTwo.setTitle(teams[1],for: .normal)
-        teamThree.setTitle(teams[2],for: .normal)
-        teamFour.setTitle(teams[3],for: .normal)
-        teamFive.setTitle(teams[4],for: .normal)
-        teamSix.setTitle(teams[5],for: .normal)
-        teamSeven.setTitle(teams[6],for: .normal)
-        teamEight.setTitle(teams[7],for: .normal)
-        teamNine.setTitle(teams[8],for: .normal)
+
         
         navigationController?.delegate = self
         
@@ -113,68 +96,7 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
-    @IBAction func teamOne(_ sender: UIButton) {
-        initiatedSegue = teams[0]
-        teamNumber = 1
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamTwo(_ sender: UIButton) {
-        initiatedSegue = teams[1]
-        teamNumber = 2
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamThree(_ sender: UIButton) {
-        initiatedSegue = teams[2]
-        teamNumber = 3
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamFour(_ sender: UIButton) {
-        initiatedSegue = teams[3]
-        teamNumber = 4
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamFive(_ sender: UIButton) {
-        initiatedSegue = teams[4]
-        teamNumber = 5
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamSix(_ sender: UIButton) {
-        initiatedSegue = teams[5]
-        teamNumber = 6
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamSeven(_ sender: UIButton) {
-        initiatedSegue = teams[6]
-        teamNumber = 7
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamEight(_ sender: UIButton) {
-        initiatedSegue = teams[7]
-        teamNumber = 8
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
-    @IBAction func teamNine(_ sender: UIButton) {
-        initiatedSegue = teams[8]
-        teamNumber = 9
-        
-        self.performSegue(withIdentifier: "segueFromBracket", sender: self)
-        
-    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAdmin" {
             let n2vc = segue.destination as! AdminViewController
@@ -186,7 +108,6 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
             let nvc = segue.destination as! ProfileViewController
             nvc.teamThatWasTapped = initiatedSegue
             nvc.teamArray = teams
-            nvc.receiveTeamNumber = teamNumber
             nvc.bioArrayProfile = bioArray
             nvc.pickerSpot = pickerSpot
             
@@ -194,10 +115,17 @@ teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "
         
     }
     
+    @IBAction func toProfileButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: nil)
+    }
+    @IBAction func toLiveStream(_ sender: UIButton) {
+    }
+    @IBAction func toBracket(_ sender: UIButton) {
+    }
+    
     @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {}
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
-
 }

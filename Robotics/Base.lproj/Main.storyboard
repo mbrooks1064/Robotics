@@ -34,16 +34,6 @@
                                     <segue destination="u9z-iH-4eE" kind="unwind" unwindAction="unwindToOne:" id="9Lw-ao-Mft"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-wf-Hf4">
-                                <rect key="frame" x="60" y="64" width="255" height="57"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8ot-Vr-XhY" id="QsE-F1-G1L"/>
-                                    <outlet property="delegate" destination="8ot-Vr-XhY" id="waJ-rc-yNn"/>
-                                    <outletCollection property="gestureRecognizers" destination="q3q-od-OTG" appends="YES" id="wwf-ia-ZDw"/>
-                                </connections>
-                            </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Team Bio here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-0f-8Gy">
                                 <rect key="frame" x="8" y="220" width="359" height="273"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,6 +48,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hW2-wf-Hf4">
+                                <rect key="frame" x="60" y="64" width="255" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8ot-Vr-XhY" id="QsE-F1-G1L"/>
+                                    <outlet property="delegate" destination="8ot-Vr-XhY" id="waJ-rc-yNn"/>
+                                    <outletCollection property="gestureRecognizers" destination="q3q-od-OTG" appends="YES" id="wwf-ia-ZDw"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -90,100 +90,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ck-LW-33r">
-                                <rect key="frame" x="0.0" y="67" width="82" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRU-AN-2aa">
+                                <rect key="frame" x="138" y="388" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
+                                <state key="normal" title="To the bracket"/>
                                 <connections>
-                                    <action selector="teamOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggJ-Su-ZRl"/>
+                                    <action selector="toBracket:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgz-QT-4Uf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAJ-76-lBx">
-                                <rect key="frame" x="0.0" y="169" width="82" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3r-KX-z44">
+                                <rect key="frame" x="129" y="327" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
+                                <state key="normal" title="To the livestream"/>
                                 <connections>
-                                    <action selector="teamThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdD-Wa-tFE"/>
+                                    <action selector="toLiveStream:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sKR-72-B3P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="set-In-bGk">
-                                <rect key="frame" x="0.0" y="220" width="82" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2p-yC-Byh">
+                                <rect key="frame" x="93" y="251" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
+                                <state key="normal" title="To the profiles of the teams"/>
                                 <connections>
-                                    <action selector="teamFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZr-Ie-wR6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oED-bG-xDy">
-                                <rect key="frame" x="0.0" y="268" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykn-RE-7oA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as9-Ly-Od7">
-                                <rect key="frame" x="0.0" y="319" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamSix:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F72-Wr-4gT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-Jz-B4N">
-                                <rect key="frame" x="0.0" y="472" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAf-TI-meV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUB-gI-lGf">
-                                <rect key="frame" x="0.0" y="523" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keA-yo-5TM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYv-n6-X5G">
-                                <rect key="frame" x="0.0" y="574" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ot2-aP-Ac3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeO-UU-dqx">
-                                <rect key="frame" x="0.0" y="625" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamNine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWe-Fr-mju"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoC-Vg-PIa">
-                                <rect key="frame" x="0.0" y="370" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamSeven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ud8-F6-zVN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDe-wY-eEP">
-                                <rect key="frame" x="0.0" y="118" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keZ-kJ-6kV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD4-AO-oSm">
-                                <rect key="frame" x="0.0" y="421" width="82" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Team Name"/>
-                                <connections>
-                                    <action selector="teamEight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBb-fk-nSE"/>
+                                    <action selector="toProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wac-21-b5D"/>
+                                    <action selector="toProfilesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q29-Q4-gjg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -198,15 +127,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="teamEight" destination="GD4-AO-oSm" id="rj8-yN-vbs"/>
-                        <outlet property="teamFive" destination="oED-bG-xDy" id="etb-MK-a2X"/>
-                        <outlet property="teamFour" destination="set-In-bGk" id="3qE-Jo-5B3"/>
-                        <outlet property="teamNine" destination="4yv-Jz-B4N" id="KcF-ft-HmJ"/>
-                        <outlet property="teamOne" destination="8ck-LW-33r" id="zum-wa-3Tl"/>
-                        <outlet property="teamSeven" destination="RoC-Vg-PIa" id="pKj-uL-3gz"/>
-                        <outlet property="teamSix" destination="as9-Ly-Od7" id="czC-Ux-CVb"/>
-                        <outlet property="teamThree" destination="DAJ-76-lBx" id="3Qh-pf-DD8"/>
-                        <outlet property="teamTwo" destination="eDe-wY-eEP" id="gbm-vP-abK"/>
                         <segue destination="TMc-IZ-qHb" kind="show" identifier="segueFromBracket" id="OZr-iT-NVd"/>
                         <segue destination="8ot-Vr-XhY" kind="show" identifier="toAdmin" id="Imu-CD-RlT"/>
                     </connections>
