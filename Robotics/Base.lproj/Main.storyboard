@@ -112,7 +112,6 @@
                                 <state key="normal" title="To the profiles of the teams"/>
                                 <connections>
                                     <action selector="toProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wac-21-b5D"/>
-                                    <action selector="toProfilesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q29-Q4-gjg"/>
                                 </connections>
                             </button>
                         </subviews>

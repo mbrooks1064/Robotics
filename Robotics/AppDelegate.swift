@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 //    override init() {
-//        FirebaseApp.configure()
+       
 //    }
     
 
@@ -54,6 +54,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dict = userInfo["aps"] as! NSDictionary;
         let message = dict["alert"];
         print("%@", message!);
+    }
+    
+    func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
+    {
+        if let messageID = userInfo[messageID]
+        
     }
 //    func swizzled_application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 //    }
