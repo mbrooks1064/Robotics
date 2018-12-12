@@ -13,11 +13,13 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    typealias InstanceIDHandler = (String?, Error?) -> Void
     var window: UIWindow?
-//    override init() {
-       
-//    }
+    override init() {
+        typealias InstanceIDResultHandler = (InstanceIDResult?, Error?) -> Void
+     
+    }
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -25,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self as? MessagingDelegate
         return true
     }
 
@@ -56,11 +59,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("%@", message!);
     }
     
-    func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
-    {
-        if let messageID = userInfo[messageID]
-        
-    }
+//    func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
+//    {
+//        if let messageID = userInfo[messageID]
+//        {
+//            let messageID = gcm
+//        }
+//
+//    }
+    
 //    func swizzled_application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 //    }
 //    func swizzled_application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -74,6 +81,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        }
 //    }
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        application.registerForRemoteNotifications()
+    }
+    
+     { (result, error) in
+    if let error = error {
+    print("Error fetching remote instance ID: \(error)")
+    } else if let result = result {
+    print("Remote instance ID token: \(result.token)")
+    self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
+    }
+    }
 
 }
 
