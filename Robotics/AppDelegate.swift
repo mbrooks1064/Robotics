@@ -55,11 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNo
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        let dict = userInfo["aps"] as! NSDictionary;
-        let message = dict["alert"];
-        print("%@", message!);
-    }
+//    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        let dict = userInfo["aps"] as! NSDictionary;
+//        let message = dict["alert"];
+//        print("%@", message!);
+//    }
 //    func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
 //    {
 //        if let messageID = userInfo[messageID]
