@@ -10,9 +10,11 @@ import UIKit
 import Firebase
 import FirebaseInstanceID
 import UserNotifications
+import UserNotificationsUI
+import NotificationCenter
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNotificationCenterDelegate {
     
     typealias InstanceIDHandler = (String?, Error?) -> Void
     var window: UIWindow?
@@ -58,7 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let message = dict["alert"];
         print("%@", message!);
     }
-    
 //    func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
 //    {
 //        if let messageID = userInfo[messageID]
@@ -99,14 +100,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
     }
     
-     { (result, error) in
-    if let error = error {
-    print("Error fetching remote instance ID: \(error)")
-    } else if let result = result {
-    print("Remote instance ID token: \(result.token)")
-    self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
-    }
-    }
+////     { (result, error) in
+////    if let error = error {
+////    print("Error fetching remote instance ID: \(error)")
+////    } else if let result = result {
+////    print("Remote instance ID token: \(result.token)")
+////    self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
+////    }
+//    }
 
 }
 

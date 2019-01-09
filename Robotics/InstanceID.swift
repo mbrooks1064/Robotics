@@ -9,10 +9,10 @@
 import Foundation
 class InstanceID : NSObject{
     typealias InstanceIDHandler = (String?, Error?) -> Void
-    class func instanceID() -> Self{
-        return self.init()
-        
-    }
+//    class func instanceID() -> Self{
+//        return self.init()
+//        
+//    }
     
     
     func getID(handler: @escaping InstanceIDHandler){ return
