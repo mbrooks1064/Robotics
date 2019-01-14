@@ -64,18 +64,18 @@ class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return teamArray[row]
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ViewController
-        vc.teams = teamArray
-        vc.bioArray = bioArrayAdmin
-//        vc.numberOfTeams = Int(numberField.text!)!
-        vc.bioArray = bioArrayAdmin
-        vc.pickerSpot = pickerSpot
-        print(vc.numberOfTeams)
-        print(vc.teams)
-        print(vc.bioArray)
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! ViewController
+//        vc.teams = teamArray
+//        vc.bioArray = bioArrayAdmin
+////        vc.numberOfTeams = Int(numberField.text!)!
+//        vc.bioArray = bioArrayAdmin
+//        vc.pickerSpot = pickerSpot
+//        print(vc.numberOfTeams)
+//        print(vc.teams)
+//        print(vc.bioArray)
+//        
+//    }
     
     
 }

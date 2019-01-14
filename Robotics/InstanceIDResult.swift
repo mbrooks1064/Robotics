@@ -10,8 +10,10 @@ import Foundation
 class InstanceIDResult : NSObject, NSCopying
 {
     func copy(with zone: NSZone? = nil) -> Any {
-        <#code#>
+        return()
     }
+    
+    
     
     
 }

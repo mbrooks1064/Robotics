@@ -10,7 +10,8 @@ import Foundation
 class InstanceID : NSObject{
     typealias InstanceIDHandler = (String?, Error?) -> Void
 //    class func instanceID() -> Self{
-//        return self.init()
+//        init(self:"Self")
+//        
 //        
 //    }
     
