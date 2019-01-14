@@ -22,17 +22,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNo
         typealias InstanceIDResultHandler = (InstanceIDResult?, Error?) -> Void
      
     }
-    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        application.registerForRemoteNotifications()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         FirebaseApp.configure()
-        Messaging.messaging().delegate = self as? MessagingDelegate
+        Messaging.messaging().delegate = self
         return true
     }
-
+    
+//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+//        InstanceID.ins { (result, error) in if let error = error {
+//        print("Error fetching remote instance ID: \(error)")
+//    } else if let result = result {
+//        print("Remote instance ID token: \(result.token)")
+//        self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
+//        }
+//        }
+//
+//        
+//    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -55,59 +82,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNo
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-//    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//        let dict = userInfo["aps"] as! NSDictionary;
-//        let message = dict["alert"];
-//        print("%@", message!);
-//    }
-//    func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        let dict = userInfo["aps"] as! NSDictionary;
+       let message = dict["alert"];
+        print("%@", message!);
+   }
+//    private func application(application: UIApplication,   didReceiveRemoteNotifications userInfo: [AnyHashable])
 //    {
-//        if let messageID = userInfo[messageID]
-//        {
-//            let messageID = gcm
+//        if let messageID = userInfo[gcmMess]
+//       {
+//         let messageID = cloud
 //        }
 //
 //    }
-    
-//    func swizzled_application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//    }
-//    func swizzled_application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//        
-//    }
-//    func askToShowVisibleNotifications() {
-//        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-//        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) {
-//            (granted, error) in
-//            ...
-//
-//        }
-//    }
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        if #available(iOS 10.0, *) {
-            // For iOS 10 display notification (sent via APNS)
-            UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
-            
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-        } else {
-            let settings: UIUserNotificationSettings =
-                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-        }
-        
-        application.registerForRemoteNotifications()
+ 
+   func swizzled_application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
     }
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+       
+    }
+    func askToShowVisibleNotifications() {
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+//       UNUserNotificationCenter.current().requestAuthorization(options: authOptions) {
+//          (granted, error) in
+//        ...}
+    }
+   
     
-////     { (result, error) in
-////    if let error = error {
-////    print("Error fetching remote instance ID: \(error)")
-////    } else if let result = result {
-////    print("Remote instance ID token: \(result.token)")
-////    self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
-////    }
-//    }
-
+  
 }
+
 
