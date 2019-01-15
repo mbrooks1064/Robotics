@@ -9,11 +9,19 @@
 import Foundation
 class InstanceID : NSObject{
     typealias InstanceIDHandler = (String?, Error?) -> Void
-//    class func instanceID() -> Self{
-//        init(self:"Self")
-//        
-//        
-//    }
+    typealias InstanceIDTokenHandler = (String?, Error?) -> Void
+   
+        
+        func token()->String
+        {
+            return ""
+        }
+    func token(withAuthorizedEntity authorizedEntity: String, scope: String, options: [AnyHashable : Any]? = nil, handler: @escaping InstanceIDTokenHandler)
+    {
+        
+    }
+
+    
     
     
     func getID(handler: @escaping InstanceIDHandler){ return

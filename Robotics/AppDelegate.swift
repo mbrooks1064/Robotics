@@ -16,6 +16,7 @@ import NotificationCenter
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNotificationCenterDelegate {
     
+    
     typealias InstanceIDHandler = (String?, Error?) -> Void
     var window: UIWindow?
     override init() {
@@ -49,17 +50,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNo
         return true
     }
     
-//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-//        InstanceID.ins { (result, error) in if let error = error {
-//        print("Error fetching remote instance ID: \(error)")
-//    } else if let result = result {
-//        print("Remote instance ID token: \(result.token)")
-//        self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
-//        }
-//        }
-//
-//        
-//    }
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        InstanceID{ (result, error) in if let error = error {
+        print("Error fetching remote instance ID: \(error)")
+    } else if let result = result {
+        print("Remote instance ID token: \(result.token)")
+        self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
+        }
+        }
+
+        
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

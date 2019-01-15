@@ -9,6 +9,9 @@
 import Foundation
 class InstanceIDResult : NSObject, NSCopying
 {
+    typealias InstanceResultIDHandler = (InstanceIDResult, Error?) -> Void
+    
+    
     func copy(with zone: NSZone? = nil) -> Any {
         return()
     }
