@@ -17,6 +17,8 @@ import NotificationCenter
 class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNotificationCenterDelegate {
     
     
+    
+    
     typealias InstanceIDHandler = (String?, Error?) -> Void
     var window: UIWindow?
     override init() {
@@ -51,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNo
     }
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        InstanceID{ (result, error) in if let error = error {
+        InstanceID{ (String, error) in if let error = error {
         print("Error fetching remote instance ID: \(error)")
     } else if let result = result {
         print("Remote instance ID token: \(result.token)")
