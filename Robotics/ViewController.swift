@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import UserNotifications
 import Messages
+import SafariServices
 
 //struct team{
 //    let school:String
@@ -17,55 +18,43 @@ import Messages
 //    let loses:Int
 //}
 
-class ViewController: UIViewController, UINavigationControllerDelegate {
-//    @IBOutlet weak var demoLabel: UILabel!
-//    var initiatedSegue: String!
-//    var teamNumber: Int!
-//    var adminAccess = false
-//    var message: String = ""
-//    var alertTitle = "On Deck Next:"
-//    var ref: DatabaseReference!
-//    var bioArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-//    let defaults = UserDefaults.standard
-//    var teams = [String]()
-//    var team = String()
-//    var numberOfTeams = 0
-//    var pickerSpot: Int = 0
-//
-//
-//    {
-//        didSet
-//        {
-//                        self.defaults.set(teams, forKey: team)
-//        }
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-////
-//        if let saveData = defaults.object(forKey: team) as? [String] {
-//            teams = saveData
-//        }
-//
-//
-//
-//        navigationController?.delegate = self
-//
-//    }
+class ViewController: UIViewController, UINavigationControllerDelegate, SFSafariViewControllerDelegate, UITabBarDelegate {
+    @IBOutlet weak var tabBarOutlet: UITabBar!
+    @IBOutlet weak var demoLabel: UILabel!
+    var teamNumber: Int!
+    var adminAccess = false
+    var message: String = ""
+    var alertTitle = "On Deck Next:"
+    var ref: DatabaseReference!
+    var bioArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var robotName: [String] = ["", "", "", "", "", "", "", "", "",]
+    let defaults = UserDefaults.standard
+    var teams = [String]()
+    var team = String()
+    var numberOfTeams = 0
+    var pickerSpot: Int = 0
+//    var tabBarItem = UITabBarItem()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        postfix()
-//teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
+        postfix()
+        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
+        openLink()
     }
-//    func postfix()
-//    {
-//        let school = "School"
-//        let loses = "Loses"
-//        let wins = "Wins"
-//        let  team: [String : AnyObject] = ["school":school as AnyObject,"loses":loses as AnyObject,"wins":wins as AnyObject]
-//        let databaseRef = Database.database().reference()
-//        databaseRef.child("Robotics").childByAutoId().setValue(team)
-//    }
-//
+    func openLink() {
+        let url = URL(string: "https://www.google.com/")
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+    }
+    func postfix()
+    {
+        let school = "School"
+        let loses = "Loses"
+        let wins = "Wins"
+        let  team: [String : AnyObject] = ["school":school as AnyObject,"loses":loses as AnyObject,"wins":wins as AnyObject]
+        let databaseRef = Database.database().reference()
+        databaseRef.child("Robotics").childByAutoId().setValue(team)
+    }
+
 //    @IBAction func adminButton(_ sender: UIBarButtonItem) {
 //        if adminAccess == true {
 //            self.performSegue(withIdentifier: "toAdmin", sender: self)
@@ -98,8 +87,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 //        alert.addAction(cancelAction)
 //        present(alert, animated: true, completion: nil)
 //    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "toAdmin" {
 //            let n2vc = segue.destination as! AdminViewController
 //            n2vc.teamThatWasTapped = initiatedSegue
@@ -107,24 +96,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 //            n2vc.bioArrayAdmin = bioArray
 //            //            n2vc.receiveTeamNumber = teamNumber
 //        } else {
-//            let nvc = segue.destination as! ProfileViewController
-//            nvc.teamThatWasTapped = initiatedSegue
-//            nvc.teamArray = teams
-//            nvc.bioArrayProfile = bioArray
-//            nvc.pickerSpot = pickerSpot
-//
+            let nvc = segue.destination as! ProfileViewController
+            nvc.teamArray = teams
+            nvc.bioArrayProfile = bioArray
+            nvc.pickerSpot = pickerSpot
+
 //        }
-//
-//    }
-//
-//    @IBAction func toProfileButton(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "segueFromBracket", sender: nil)
-//    }
-//    @IBAction func toLiveStream(_ sender: UIButton) {
-//    }
-//    @IBAction func toBracket(_ sender: UIButton) {
-//    }
-//
+
+    }
+
+    @IBAction func toProfileButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueFromBracket", sender: nil)
+    }
+    @IBAction func toLiveStream(_ sender: UIButton) {
+    }
+    @IBAction func toBracket(_ sender: UIButton) {
+    }
+
 //    @IBAction func unwindToOne(_ sender: UIStoryboardSegue) {}
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)

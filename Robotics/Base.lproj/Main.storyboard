@@ -90,44 +90,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRU-AN-2aa">
-                                <rect key="frame" x="138" y="388" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To the bracket"/>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1a-83-yut">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Team Profiles" id="Qcn-mn-5bX"/>
+                                    <tabBarItem title="Livestream" id="sld-2G-36A">
+                                        <color key="badgeColor" red="0.0" green="0.11743269200000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Bracket" id="BL3-C9-keb"/>
+                                </items>
                                 <connections>
-                                    <action selector="toBracket:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgz-QT-4Uf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iA7-9T-6fK"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3r-KX-z44">
-                                <rect key="frame" x="129" y="327" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To the livestream"/>
-                                <connections>
-                                    <action selector="toLiveStream:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sKR-72-B3P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2p-yC-Byh">
-                                <rect key="frame" x="93" y="251" width="188" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To the profiles of the teams"/>
-                                <connections>
-                                    <action selector="toProfileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wac-21-b5D"/>
-                                </connections>
-                            </button>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EZ6-UH-VJk">
-                        <barButtonItem key="rightBarButtonItem" title="Admin" id="vir-Fx-Qwi">
-                            <connections>
-                                <action selector="adminButton:" destination="BYZ-38-t0r" id="l4L-XK-iIH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="EZ6-UH-VJk"/>
                     <connections>
+                        <outlet property="tabBarOutlet" destination="H1a-83-yut" id="UYg-9J-wuY"/>
                         <segue destination="TMc-IZ-qHb" kind="show" identifier="segueFromBracket" id="OZr-iT-NVd"/>
-                        <segue destination="8ot-Vr-XhY" kind="show" identifier="toAdmin" id="Imu-CD-RlT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRg-9s-d9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-525.78710644677665"/>
+            <point key="canvasLocation" x="1610" y="-510"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MGl-iZ-o4y">
@@ -199,7 +184,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obD-52-rHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="-524"/>
+            <point key="canvasLocation" x="15" y="-510"/>
         </scene>
     </scenes>
 </document>
