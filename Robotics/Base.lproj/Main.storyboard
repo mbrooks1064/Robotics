@@ -111,7 +111,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="EZ6-UH-VJk"/>
                     <connections>
+                        <outlet property="bracketTabItem" destination="BL3-C9-keb" id="cZT-li-6Jz"/>
+                        <outlet property="livestreamBracketItem" destination="sld-2G-36A" id="DKd-MW-6xo"/>
                         <outlet property="tabBarOutlet" destination="H1a-83-yut" id="UYg-9J-wuY"/>
+                        <outlet property="teamProfileBracketItem" destination="Qcn-mn-5bX" id="RPh-fZ-cxo"/>
                         <segue destination="TMc-IZ-qHb" kind="show" identifier="segueFromBracket" id="OZr-iT-NVd"/>
                     </connections>
                 </viewController>

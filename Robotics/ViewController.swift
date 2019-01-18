@@ -19,6 +19,9 @@ import SafariServices
 //}
 
 class ViewController: UIViewController, UINavigationControllerDelegate, SFSafariViewControllerDelegate, UITabBarDelegate {
+    @IBOutlet weak var teamProfileBracketItem: UITabBarItem!
+    @IBOutlet weak var livestreamBracketItem: UITabBarItem!
+    @IBOutlet weak var bracketTabItem: UITabBarItem!
     @IBOutlet weak var tabBarOutlet: UITabBar!
     @IBOutlet weak var demoLabel: UILabel!
     var teamNumber: Int!
@@ -33,28 +36,26 @@ class ViewController: UIViewController, UINavigationControllerDelegate, SFSafari
     var team = String()
     var numberOfTeams = 0
     var pickerSpot: Int = 0
-//    var tabBarItem = UITabBarItem()
+    var tabItem = UITabBarItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        postfix()
+//        postfix()
         teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
         openLink()
+        tabBarOutlet.selectedItem = livestreamBracketItem
     }
     func openLink() {
-        let url = URL(string: "https://www.google.com/")
-        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
-    }
-    func postfix()
-    {
-        let school = "School"
-        let loses = "Loses"
-        let wins = "Wins"
-        let  team: [String : AnyObject] = ["school":school as AnyObject,"loses":loses as AnyObject,"wins":wins as AnyObject]
-        let databaseRef = Database.database().reference()
-        databaseRef.child("Robotics").childByAutoId().setValue(team)
-    }
+        let url = URL(string: "https://www.google.com/")!
+//        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        let vc = SFSafariViewController(url: url)
+        vc.delegate = self
+        present(vc, animated: true)
+        tabBarOutlet.isHidden = false
+        
+        view.bringSubview(toFront: tabBarOutlet)
 
+    }
 //    @IBAction func adminButton(_ sender: UIBarButtonItem) {
 //        if adminAccess == true {
 //            self.performSegue(withIdentifier: "toAdmin", sender: self)
