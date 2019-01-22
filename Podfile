@@ -10,8 +10,10 @@ pod 'FirebaseMessaging'
 pod 'Firebase/Database'
 pod 'Firebase/Firestore'
 
+pod 'OneSignal', '>= 2. 6. 2','3.0'
+end
 
-
-
+target 'NotificationCenter' do
+    pod 'OneSignal', '>= 2. 6. 2','3.0'
 end
 

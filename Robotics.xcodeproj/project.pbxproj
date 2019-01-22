@@ -15,11 +15,37 @@
 		6E4D79D721875DD900F8EEA0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */; };
 		6E6835F3218CA2AB00D6D7B2 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */; };
 		6EA773E32195E8700069814B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EA773E22195E8700069814B /* GoogleService-Info.plist */; };
+		6EB6C79A21F2335800AF143A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6C79921F2335800AF143A /* NotificationService.swift */; };
+		6EB6C79E21F2335800AF143A /* NotificationCenter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6EB6C79721F2335800AF143A /* NotificationCenter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6ED6FCC421E6622300A5E535 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED6FCC321E6622300A5E535 /* GoogleService-Info (2).plist */; };
 		6EFE0B3421C16ED8008160FA /* InstanceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE0B3321C16ED8008160FA /* InstanceID.swift */; };
 		6EFE0B3621C1708A008160FA /* InstanceIDResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE0B3521C1708A008160FA /* InstanceIDResult.swift */; };
 		D390F9320C553B58631F7348 /* libPods-Robotics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 824F490E87B6759534AB55E0 /* libPods-Robotics.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EB6C79C21F2335800AF143A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E4D79B92187591A00F8EEA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EB6C79621F2335800AF143A;
+			remoteInfo = NotificationCenter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6EB6C7A221F2335800AF143A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6EB6C79E21F2335800AF143A /* NotificationCenter.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21C19DF27296D04573734C4E /* Pods-Robotics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robotics.release.xcconfig"; path = "Pods/Target Support Files/Pods-Robotics/Pods-Robotics.release.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +61,9 @@
 		6E715A3821B199370030BF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		6EA773E22195E8700069814B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6EA773E42195EAEE0069814B /* Robotics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Robotics.entitlements; sourceTree = "<group>"; };
+		6EB6C79721F2335800AF143A /* NotificationCenter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationCenter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB6C79921F2335800AF143A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6EB6C79B21F2335800AF143A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ED6FCC321E6622300A5E535 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 		6EFE0B3321C16ED8008160FA /* InstanceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceID.swift; sourceTree = "<group>"; };
 		6EFE0B3521C1708A008160FA /* InstanceIDResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceIDResult.swift; sourceTree = "<group>"; };
@@ -51,6 +80,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EB6C79421F2335800AF143A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				6E4D79C32187591A00F8EEA0 /* Robotics */,
+				6EB6C79821F2335800AF143A /* NotificationCenter */,
 				6E4D79C22187591A00F8EEA0 /* Products */,
 				E9103EA6A94C0779BDCFE12A /* Pods */,
 				D522F7BDA90BDB309BF49470 /* Frameworks */,
@@ -68,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6E4D79C12187591A00F8EEA0 /* Robotics.app */,
+				6EB6C79721F2335800AF143A /* NotificationCenter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +128,15 @@
 				6EA773E22195E8700069814B /* GoogleService-Info.plist */,
 			);
 			path = Robotics;
+			sourceTree = "<group>";
+		};
+		6EB6C79821F2335800AF143A /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				6EB6C79921F2335800AF143A /* NotificationService.swift */,
+				6EB6C79B21F2335800AF143A /* Info.plist */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		D522F7BDA90BDB309BF49470 /* Frameworks */ = {
@@ -121,15 +168,34 @@
 				6E4D79BE2187591A00F8EEA0 /* Frameworks */,
 				6E4D79BF2187591A00F8EEA0 /* Resources */,
 				A0C82E0B21BBE5FA2E423C56 /* [CP] Copy Pods Resources */,
+				6EB6C7A221F2335800AF143A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6EB6C79D21F2335800AF143A /* PBXTargetDependency */,
 			);
 			name = Robotics;
 			productName = Robotics;
 			productReference = 6E4D79C12187591A00F8EEA0 /* Robotics.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6EB6C79621F2335800AF143A /* NotificationCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EB6C7A121F2335800AF143A /* Build configuration list for PBXNativeTarget "NotificationCenter" */;
+			buildPhases = (
+				6EB6C79321F2335800AF143A /* Sources */,
+				6EB6C79421F2335800AF143A /* Frameworks */,
+				6EB6C79521F2335800AF143A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationCenter;
+			productName = NotificationCenter;
+			productReference = 6EB6C79721F2335800AF143A /* NotificationCenter.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -137,7 +203,7 @@
 		6E4D79B92187591A00F8EEA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = period3;
 				TargetAttributes = {
@@ -151,6 +217,9 @@
 								enabled = 1;
 							};
 						};
+					};
+					6EB6C79621F2335800AF143A = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -168,6 +237,7 @@
 			projectRoot = "";
 			targets = (
 				6E4D79C02187591A00F8EEA0 /* Robotics */,
+				6EB6C79621F2335800AF143A /* NotificationCenter */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +252,13 @@
 				6E4D79CC2187591C00F8EEA0 /* Assets.xcassets in Resources */,
 				6ED6FCC421E6622300A5E535 /* GoogleService-Info (2).plist in Resources */,
 				6E4D79CA2187591A00F8EEA0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EB6C79521F2335800AF143A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +321,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EB6C79321F2335800AF143A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EB6C79A21F2335800AF143A /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EB6C79D21F2335800AF143A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EB6C79621F2335800AF143A /* NotificationCenter */;
+			targetProxy = 6EB6C79C21F2335800AF143A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E4D79C82187591A00F8EEA0 /* Main.storyboard */ = {
@@ -385,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Robotics/Robotics.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -407,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21C19DF27296D04573734C4E /* Pods-Robotics.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Robotics/Robotics.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -421,6 +516,51 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6EB6C79F21F2335800AF143A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				INFOPLIST_FILE = NotificationCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Brooks.Roboticssss.NotificationCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EB6C7A021F2335800AF143A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				INFOPLIST_FILE = NotificationCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Brooks.Roboticssss.NotificationCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -442,6 +582,15 @@
 			buildConfigurations = (
 				6E4D79D42187591C00F8EEA0 /* Debug */,
 				6E4D79D52187591C00F8EEA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EB6C7A121F2335800AF143A /* Build configuration list for PBXNativeTarget "NotificationCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EB6C79F21F2335800AF143A /* Debug */,
+				6EB6C7A021F2335800AF143A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
