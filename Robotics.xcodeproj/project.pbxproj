@@ -20,6 +20,7 @@
 		6ED6FCC421E6622300A5E535 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED6FCC321E6622300A5E535 /* GoogleService-Info (2).plist */; };
 		6EFE0B3421C16ED8008160FA /* InstanceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE0B3321C16ED8008160FA /* InstanceID.swift */; };
 		6EFE0B3621C1708A008160FA /* InstanceIDResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFE0B3521C1708A008160FA /* InstanceIDResult.swift */; };
+		8CD90E1821FBA0FE735FC94B /* libPods-NotificationCenter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC5834C830823108ECABEB6 /* libPods-NotificationCenter.a */; };
 		D390F9320C553B58631F7348 /* libPods-Robotics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 824F490E87B6759534AB55E0 /* libPods-Robotics.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		6E4D79CE2187591C00F8EEA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E4D79D02187591C00F8EEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4D79D621875DD900F8EEA0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6E60FE276D3235A27F7FB544 /* Pods-NotificationCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationCenter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationCenter/Pods-NotificationCenter.debug.xcconfig"; sourceTree = "<group>"; };
 		6E6835F2218CA2AB00D6D7B2 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		6E715A3821B199370030BF8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		6EA773E22195E8700069814B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -67,8 +69,10 @@
 		6ED6FCC321E6622300A5E535 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 		6EFE0B3321C16ED8008160FA /* InstanceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceID.swift; sourceTree = "<group>"; };
 		6EFE0B3521C1708A008160FA /* InstanceIDResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceIDResult.swift; sourceTree = "<group>"; };
+		7C9BDF1C5E7082DD0CC3BC58 /* Pods-NotificationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationCenter.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotificationCenter/Pods-NotificationCenter.release.xcconfig"; sourceTree = "<group>"; };
 		824F490E87B6759534AB55E0 /* libPods-Robotics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Robotics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Robotics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Robotics/Pods-Robotics.debug.xcconfig"; sourceTree = "<group>"; };
+		DDC5834C830823108ECABEB6 /* libPods-NotificationCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationCenter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD90E1821FBA0FE735FC94B /* libPods-NotificationCenter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				824F490E87B6759534AB55E0 /* libPods-Robotics.a */,
+				DDC5834C830823108ECABEB6 /* libPods-NotificationCenter.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 			children = (
 				89B56D8037AD3CE5FEBDF5C2 /* Pods-Robotics.debug.xcconfig */,
 				21C19DF27296D04573734C4E /* Pods-Robotics.release.xcconfig */,
+				6E60FE276D3235A27F7FB544 /* Pods-NotificationCenter.debug.xcconfig */,
+				7C9BDF1C5E7082DD0CC3BC58 /* Pods-NotificationCenter.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EB6C7A121F2335800AF143A /* Build configuration list for PBXNativeTarget "NotificationCenter" */;
 			buildPhases = (
+				02E139AABE94A6ED41B2CEC5 /* [CP] Check Pods Manifest.lock */,
 				6EB6C79321F2335800AF143A /* Sources */,
 				6EB6C79421F2335800AF143A /* Frameworks */,
 				6EB6C79521F2335800AF143A /* Resources */,
@@ -265,6 +274,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02E139AABE94A6ED41B2CEC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationCenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0C82E0B21BBE5FA2E423C56 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,6 +553,7 @@
 		};
 		6EB6C79F21F2335800AF143A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E60FE276D3235A27F7FB544 /* Pods-NotificationCenter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -545,6 +577,7 @@
 		};
 		6EB6C7A021F2335800AF143A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C9BDF1C5E7082DD0CC3BC58 /* Pods-NotificationCenter.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
