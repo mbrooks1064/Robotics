@@ -29,32 +29,44 @@ class ViewController: UIViewController, UINavigationControllerDelegate, SFSafari
     var message: String = ""
     var alertTitle = "On Deck Next:"
     var ref: DatabaseReference!
-    var bioArray: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    var robotName: [String] = ["", "", "", "", "", "", "", "", "",]
+    var bioArray: [String] = ["Bobby's cool team", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var robotName: [String] = ["Mini Bobby", "", "", "", "", "", "", "", "",]
+    var teamNames: [String] = ["Bobby's Boiz", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
+    var teamMembers: [String] = ["Bobby and others", "", "", "", "", "", "", "", ""]
+    var pictureOfRobots: [UIImage] = [#imageLiteral(resourceName: "RoboRumble")]
     let defaults = UserDefaults.standard
-    var teams = [String]()
-    var team = String()
-    var numberOfTeams = 0
-    var pickerSpot: Int = 0
     var tabItem = UITabBarItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 //        postfix()
-        teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6", "Team 7", "Team 8", "Team 9"]
-        openLink()
+        openLinkLivestream()
         tabBarOutlet.selectedItem = livestreamBracketItem
     }
-    func openLink() {
+    func openLinkLivestream() {
         let url = URL(string: "https://www.google.com/")!
 //        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
         let vc = SFSafariViewController(url: url)
         vc.delegate = self
         present(vc, animated: true)
         tabBarOutlet.isHidden = false
-        
         view.bringSubview(toFront: tabBarOutlet)
-
+    }
+    func openLinkBracket() {
+        let url = URL(string: "https://www.google.com/")!
+        //        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        let vc = SFSafariViewController(url: url)
+        vc.delegate = self
+        present(vc, animated: true)
+    }
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.title == "Team Profiles" {
+            self.performSegue(withIdentifier: "toProfiles", sender: self)
+        } else if item.title == "Livestream" {
+            openLinkLivestream()
+        } else {
+            openLinkBracket()
+        }
     }
 //    @IBAction func adminButton(_ sender: UIBarButtonItem) {
 //        if adminAccess == true {
@@ -98,10 +110,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, SFSafari
 //            //            n2vc.receiveTeamNumber = teamNumber
 //        } else {
             let nvc = segue.destination as! ProfileViewController
-            nvc.teamArray = teams
-            nvc.bioArrayProfile = bioArray
-            nvc.pickerSpot = pickerSpot
-
+        nvc.bioArrayProfile = bioArray
+        nvc.teamArrayProfile = teamNames
+        nvc.robotNameProfile = robotName
+        nvc.teamMembersProfile = teamMembers
+        nvc.pictureOfRobotsProfile = pictureOfRobots
 //        }
 
     }

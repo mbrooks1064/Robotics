@@ -115,7 +115,7 @@
                         <outlet property="livestreamBracketItem" destination="sld-2G-36A" id="DKd-MW-6xo"/>
                         <outlet property="tabBarOutlet" destination="H1a-83-yut" id="UYg-9J-wuY"/>
                         <outlet property="teamProfileBracketItem" destination="Qcn-mn-5bX" id="RPh-fZ-cxo"/>
-                        <segue destination="TMc-IZ-qHb" kind="show" identifier="segueFromBracket" id="OZr-iT-NVd"/>
+                        <segue destination="TMc-IZ-qHb" kind="show" identifier="toProfiles" id="rsX-as-0cL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,46 +130,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3x-mU-j44">
-                                <rect key="frame" x="0.0" y="64" width="375" height="80"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bio" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-bW-iRm">
+                                <rect key="frame" x="0.0" y="454" width="375" height="153"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="86a-WK-mhp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-BG-BqU">
+                                <rect key="frame" x="0.0" y="620" width="375" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Yfk-tu-VDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJ4-t1-1Yb">
+                                <rect key="frame" x="0.0" y="185" width="375" height="213"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KW-QF-lMf">
+                                <rect key="frame" x="16" y="404" width="336" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3x-mU-j44">
+                                <rect key="frame" x="0.0" y="64" width="375" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="Qb4-Tv-Rxm"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="TMc-IZ-qHb" id="I6b-UM-eaq"/>
                                     <outlet property="delegate" destination="TMc-IZ-qHb" id="niL-qx-7Od"/>
                                 </connections>
                             </pickerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Bio" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-bW-iRm">
-                                <rect key="frame" x="0.0" y="354" width="359" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-BG-BqU">
-                                <rect key="frame" x="16" y="626" width="343" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJ4-t1-1Yb">
-                                <rect key="frame" x="23" y="144" width="343" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6KW-QF-lMf" firstAttribute="leading" secondItem="sob-6w-z4y" secondAttribute="leadingMargin" id="3SD-Lg-T1w"/>
+                            <constraint firstItem="wYH-BG-BqU" firstAttribute="top" secondItem="LTM-bW-iRm" secondAttribute="bottom" constant="13" id="5Xi-SK-vzm"/>
+                            <constraint firstItem="rJ4-t1-1Yb" firstAttribute="trailing" secondItem="LTM-bW-iRm" secondAttribute="trailing" id="DnK-vJ-Gz9"/>
+                            <constraint firstAttribute="trailing" secondItem="s3x-mU-j44" secondAttribute="trailing" id="Ex9-xD-S2V"/>
+                            <constraint firstItem="s3x-mU-j44" firstAttribute="trailing" secondItem="rJ4-t1-1Yb" secondAttribute="trailing" id="KGp-o9-A9P"/>
+                            <constraint firstItem="rJ4-t1-1Yb" firstAttribute="leading" secondItem="LTM-bW-iRm" secondAttribute="leading" id="LiL-Pd-gZA"/>
+                            <constraint firstItem="LTM-bW-iRm" firstAttribute="top" secondItem="6KW-QF-lMf" secondAttribute="bottom" constant="29" id="M2C-DF-kPs"/>
+                            <constraint firstItem="s3x-mU-j44" firstAttribute="top" secondItem="ENa-vr-Mcr" secondAttribute="top" id="MQ8-sh-ahS"/>
+                            <constraint firstItem="LTM-bW-iRm" firstAttribute="trailing" secondItem="wYH-BG-BqU" secondAttribute="trailing" id="SsQ-Qd-sBp"/>
+                            <constraint firstItem="6KW-QF-lMf" firstAttribute="top" secondItem="rJ4-t1-1Yb" secondAttribute="bottom" constant="6" id="iE4-og-4Ql"/>
+                            <constraint firstItem="rJ4-t1-1Yb" firstAttribute="top" secondItem="s3x-mU-j44" secondAttribute="bottom" constant="10" id="iKa-ER-dPP"/>
+                            <constraint firstItem="s3x-mU-j44" firstAttribute="leading" secondItem="rJ4-t1-1Yb" secondAttribute="leading" id="ijO-a3-kFn"/>
+                            <constraint firstItem="ENa-vr-Mcr" firstAttribute="trailing" secondItem="6KW-QF-lMf" secondAttribute="trailing" constant="23" id="tKH-e8-riC"/>
+                            <constraint firstItem="wYH-BG-BqU" firstAttribute="bottom" secondItem="ENa-vr-Mcr" secondAttribute="bottom" id="v6d-1d-EoG"/>
+                            <constraint firstItem="LTM-bW-iRm" firstAttribute="leading" secondItem="wYH-BG-BqU" secondAttribute="leading" id="vuW-sk-e2G"/>
+                            <constraint firstItem="s3x-mU-j44" firstAttribute="leading" secondItem="sob-6w-z4y" secondAttribute="leading" id="wcb-dk-qc4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ENa-vr-Mcr"/>
                     </view>
                     <connections>
                         <outlet property="bioText" destination="LTM-bW-iRm" id="kpg-3E-HbV"/>
                         <outlet property="imageView" destination="rJ4-t1-1Yb" id="KEy-JU-paY"/>
                         <outlet property="pickerView" destination="s3x-mU-j44" id="IFP-rO-jmz"/>
-                        <outlet property="teamNameLabel" destination="wYH-BG-BqU" id="oMa-6S-ZoE"/>
+                        <outlet property="robotNameLabel" destination="6KW-QF-lMf" id="UJQ-8j-2FF"/>
+                        <outlet property="teamMembersLabel" destination="wYH-BG-BqU" id="bIq-YK-VdP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRg-9s-d9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="-510"/>
+            <point key="canvasLocation" x="1608.8" y="-510.49475262368821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MGl-iZ-o4y">
