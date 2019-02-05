@@ -12,6 +12,7 @@ import FirebaseInstanceID
 import UserNotifications
 import UserNotificationsUI
 import NotificationCenter
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNotificationCenterDelegate {
@@ -44,13 +45,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNo
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-        application.registerUserNotificationSettings(settings)
-        application.registerForRemoteNotifications()
-        FirebaseApp.configure()
-        Messaging.messaging().delegate = self
+        let oneSignalSettings = [kOSSettingsKeyAutoPrompt:false]
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "222cd172-f136-49ea-b1ab-e29b4ef55034", handleNotificationAction: nil, settings: oneSignalSettings)
+//        let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+//        application.registerUserNotificationSettings(settings)
+//        application.registerForRemoteNotifications()
+//        FirebaseApp.configure()
+//        Messaging.messaging().delegate = self
+//        return true
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+        
         return true
     }
+    
     
 //    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
 //        InstanceID{ (String, error) in if let error = error {
