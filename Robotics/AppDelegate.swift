@@ -7,15 +7,14 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseInstanceID
+
 import UserNotifications
 import UserNotificationsUI
 import NotificationCenter
 import OneSignal
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,MessagingDelegate,UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     
     

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class AdminViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var bioBox: UITextView!
