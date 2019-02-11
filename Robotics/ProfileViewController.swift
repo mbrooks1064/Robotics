@@ -27,6 +27,11 @@ class ProfileViewController: UIViewController, UINavigationControllerDelegate, S
     override func viewDidLoad() {
         super.viewDidLoad()
         updateStuff(A: 0)
+        var tabFrame = self.tabBarOutlet.frame
+        // - 40 is editable , the default value is 49 px, below lowers the tabbar and above increases the tab bar size
+        tabFrame.size.height = 70
+//        tabFrame.origin.y = self.view.frame.size.height - 40
+        self.tabBarOutlet.frame = tabFrame
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         updateStuff(A: row)
