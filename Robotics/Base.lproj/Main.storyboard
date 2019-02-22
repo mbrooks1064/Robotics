@@ -93,7 +93,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bio" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-bW-iRm">
                                 <rect key="frame" x="0.0" y="433.5" width="375" height="93.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJ4-t1-1Yb">
@@ -119,9 +119,9 @@
                                     <outlet property="delegate" destination="TMc-IZ-qHb" id="8Of-D9-TnO"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-BG-BqU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-BG-BqU">
                                 <rect key="frame" x="0.0" y="537" width="375" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -130,7 +130,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="Livestream" id="sPj-HF-2cZ"/>
-                                    <tabBarItem title="Bracket" id="9gq-Tk-9M0"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="TMc-IZ-qHb" id="9gA-4a-mjd"/>
@@ -168,7 +167,6 @@
                     </view>
                     <connections>
                         <outlet property="bioText" destination="LTM-bW-iRm" id="kpg-3E-HbV"/>
-                        <outlet property="bracketBarItem" destination="9gq-Tk-9M0" id="b01-Et-8C6"/>
                         <outlet property="imageView" destination="rJ4-t1-1Yb" id="KEy-JU-paY"/>
                         <outlet property="livestreamBarItem" destination="sPj-HF-2cZ" id="3WP-1y-hZl"/>
                         <outlet property="pickerView" destination="s3x-mU-j44" id="IFP-rO-jmz"/>
